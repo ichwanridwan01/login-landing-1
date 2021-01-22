@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #0f3057;
+  background-image: url(/i-like-food/i-like-food.svg);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 200px;
+}
+
+.container .content-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .content-main .card {
+  padding: 50px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card form .form-control input[type="text"],
+.form-control input[type="password"] {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  border: 2px solid black;
+}
+
+.card form .form-control input[type="text"]:focus,
+.form-control input[type="password"]:focus {
+  outline: none;
+  border: none;
+  width: 300px;
+  text-align: center;
+  border: 2px solid #0f3057;
+}
+
+.card form .form-control {
+  position: relative;
+}
+
+.form-control i {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+  color: aquamarine;
+  visibility: hidden;
+}
+
+.form-control.erorr i.fa-exclamation-circle {
+  color: red;
+  visibility: visible;
+}
+
+.form-control small {
+  visibility: hidden;
+}
+
+.form-control.erorr small {
+  visibility: visible;
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.card {
+  width: 500px;
+  background-color: white;
+}
+
+.card button {
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #0f3057;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.card button:focus {
+  outline: none;
+}
+
+@media (max-width: 500px) {
+  .card {
+    margin-right: 50px;
+    width: 150px;
+  }
+
+  .card form .form-control input[type="text"],
+  .form-control input[type="password"] {
+    width: 150px;
+  }
+
+  .card form .form-control input[type="text"]:focus,
+  .form-control input[type="password"]:focus {
+    width: 150px;
+    text-align: start;
+  }
+}
